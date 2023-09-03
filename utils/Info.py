@@ -6,7 +6,7 @@ from utils.GetAbis import (ERC20_ABI_PATH,
                              JEDISWAP_ETHUSDT_ABI_PATH,
                              JEDISWAP_USDCUSDT_ABI_PATH,
                              DMAIL_ABI_PATH,
-                             AVNUSWAP_ABI_PATH,
+                             AVNUFI_ABI_PATH,
                              STARKNETID_ABI_PATH)
 from typing import Union
 from dataclasses import dataclass
@@ -38,7 +38,7 @@ class ContractInfo:
     DAI = {'address': 0x00da114221cb83fa859dbdb4c44beeaa0bb37c7537ad5ae66fe5e0efd20e6eb3, 'abi': json.load(open(DAI_ABI_PATH)), 'name': 'DAI', 'decimals': 18}
     JEDISWAP = {'address': 0x041fd22b238fa21cfcf5dd45a8548974d8263b3a531a60388411c5e230f97023, 'abi': json.load(open(JEDISWAP_ABI_PATH))}
     DMAIL = {'address': 0x0454f0bd015e730e5adbb4f080b075fdbf55654ff41ee336203aa2e1ac4d4309, 'abi': json.load(open(DMAIL_ABI_PATH))}
-    AVNUSWAP = {'address': 0x04270219d365d6b017231b52e92b3fb5d7c8378b05e9abc97724537a80e93b0f, 'abi': json.load(open(AVNUSWAP_ABI_PATH))}
+    AVNUFI = {'address': 0x04270219d365d6b017231b52e92b3fb5d7c8378b05e9abc97724537a80e93b0f, 'abi': json.load(open(AVNUFI_ABI_PATH))}
     STARKNETID = {'address': 0x05dbdedc203e92749e2e746e2d40a768d966bd243df04a6b712e222bc040a9af, 'abi': json.load(open(STARKNETID_ABI_PATH))}
 
     JEDISWAP_ETHUSDC = {'address': 0x04d0390b777b424e43839cd1e744799f3de6c176c7e32c1812a41dbd9c19db6a, 'abi': json.load(open(JEDISWAP_ETHUSDC_ABI_PATH)), 'name': 'ETHUSDC JediSwap', 'decimals': 18}
@@ -76,5 +76,5 @@ class ContractInfo:
             return ContractInfo.DMAIL
 
         elif contract_address == 0x04270219d365d6b017231b52e92b3fb5d7c8378b05e9abc97724537a80e93b0f:
-            return ContractInfo.AVNUSWAP
+            return ContractInfo.AVNUFI
 
